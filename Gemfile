@@ -18,7 +18,7 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 4.0'
+gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -27,6 +27,24 @@ gem 'jbuilder', '~> 2.7'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
+
+### 20200712 ###
+# use haml
+gem 'haml-rails'
+# use dotenv
+gem 'dotenv-rails'
+# UI
+gem 'semantic-ui-sass', git: 'https://github.com/doabit/semantic-ui-sass.git'
+gem 'jquery-rails'
+# user login
+# Authentication
+gem 'devise'
+gem 'devise-i18n'
+gem 'devise-i18n-views'
+gem 'devise-semantified', git: 'https://github.com/ajex13/devise-semantified.git'
+# Authorization
+gem 'cancancan'
+gem 'rails_admin'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -40,6 +58,19 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+
+  ### 20200712 ###
+  # index model schema
+  gem 'annotate'
+  # エラー画面をわかりやすく整形してくれる
+  gem 'better_errors'
+  # better_errorsの画面上にirb/pry(PERL)を表示する
+  gem 'binding_of_caller'
+  # n+1問題
+  gem 'bullet'
+  gem 'rubocop'
+  # profiler
+  gem 'rack-mini-profiler', require: false
 end
 
 group :test do
